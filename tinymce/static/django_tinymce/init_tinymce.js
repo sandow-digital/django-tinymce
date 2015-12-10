@@ -9,6 +9,7 @@
       if ($e.attr('data-mce-gz-conf')) {
         tinyMCE_GZ.init($.parseJSON($e.attr('data-mce-gz-conf')));
       }
+      mce_conf['file_browser_callback'] = fileBrowserCallback;
       if (!tinyMCE.editors[id]) {
         tinyMCE.init(mce_conf);
       }
