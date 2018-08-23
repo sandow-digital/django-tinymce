@@ -76,7 +76,7 @@ var ImageDialog = {
 
 		// If option enabled default contrain proportions to checked
 		if (ed.getParam("advimage_constrain_proportions", true))
-			f.constrain.checked = true;
+			f.constrain.checked = false;
 
 		// Check swap image if valid data
 		if (nl.onmouseoversrc.value || nl.onmouseoutsrc.value)
