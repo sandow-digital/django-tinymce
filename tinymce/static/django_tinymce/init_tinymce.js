@@ -5,6 +5,7 @@
       var id = $e.attr('id');
       if ('elements' in mce_conf && mce_conf['mode'] == 'exact') {
         mce_conf['elements'] = id;
+        console.log('mce_conf[elements]: ' + id);
       }
       if ($e.attr('data-mce-gz-conf')) {
         tinyMCE_GZ.init($.parseJSON($e.attr('data-mce-gz-conf')));
