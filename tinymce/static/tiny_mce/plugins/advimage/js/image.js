@@ -1,6 +1,7 @@
 var ImageDialog = {
 	preInit : function() {
 		var url;
+		console.log('\nImageDialog url: ' + url + '\n');
 
 		tinyMCEPopup.requireLangPack();
 
@@ -76,7 +77,7 @@ var ImageDialog = {
 
 		// If option enabled default contrain proportions to checked
 		if (ed.getParam("advimage_constrain_proportions", true))
-			f.constrain.checked = false;
+			f.constrain.checked = true;
 
 		// Check swap image if valid data
 		if (nl.onmouseoversrc.value || nl.onmouseoutsrc.value)
