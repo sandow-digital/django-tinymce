@@ -11,6 +11,8 @@
 (function() {
 	tinymce.create('tinymce.plugins.AdvancedImagePlugin', {
 		init : function(ed, url) {
+			console.log('Made it to the init of advimage/editor_plugin_src');
+
 			// Register commands
 			ed.addCommand('mceAdvImage', function() {
 				// Internal image object like a flash placeholder
