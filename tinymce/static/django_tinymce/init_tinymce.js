@@ -5,6 +5,7 @@
       var id = $e.attr('id');
       if ('elements' in mce_conf && mce_conf['mode'] == 'exact') {
         mce_conf['elements'] = id;
+        console.log('\nmce_conf[elements]: ' + id + '\n');
       }
       if ($e.attr('data-mce-gz-conf')) {
         tinyMCE_GZ.init($.parseJSON($e.attr('data-mce-gz-conf')));
@@ -26,6 +27,7 @@
     // initialize the TinyMCE editor after adding an inline
     // XXX: We don't use jQuery's click event as it won't work in Django 1.4
     document.body.addEventListener("click", function(ev) {
+      console.log('\nAdding Event Listeners...\n');
       if(!ev.target.parentNode || ev.target.parentNode.className.indexOf("add-row") === -1) {
         return;
       }

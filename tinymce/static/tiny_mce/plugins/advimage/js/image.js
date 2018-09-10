@@ -1,6 +1,7 @@
 var ImageDialog = {
 	preInit : function() {
 		var url;
+		console.log('\nImageDialog url: ' + url + '\n');
 
 		tinyMCEPopup.requireLangPack();
 
