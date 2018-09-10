@@ -138,12 +138,12 @@ def filebrowser(request):
     return render_to_response('tinymce/filebrowser.js', {'fb_url': fb_url},
             context_instance=RequestContext(request))
 
-def embeddedimagetagger(request):
-    # try:
-    #     embeddedimagetagger_url = request.build_absolute_uri(urlresolvers.reverse('embeddedimagetagger_tag'))
-    # except:
-    #     embeddedimagetagger_url = request.build_absolute_uri(urlresolvers.reverse('embeddedimagetagger:embeddedimagetagger_tag'))
+# def embeddedimagetagger(request):
+#     # try:
+#     #     embeddedimagetagger_url = request.build_absolute_uri(urlresolvers.reverse('embeddedimagetagger_tag'))
+#     # except:
+#     #     embeddedimagetagger_url = request.build_absolute_uri(urlresolvers.reverse('embeddedimagetagger:embeddedimagetagger_tag'))
 
-    return render_to_response('tinymce/embeddedimagetagger.js', 
-            # {'embeddedimagetagger_url': embeddedimagetagger_url},
-            context_instance=RequestContext(request))
+#     return render_to_response('tinymce/embeddedimagetagger.js', 
+#             # {'embeddedimagetagger_url': embeddedimagetagger_url},
+#             context_instance=RequestContext(request))

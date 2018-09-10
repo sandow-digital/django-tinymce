@@ -12,6 +12,6 @@ urlpatterns = [
     url(r'^flatpages_link_list/$', flatpages_link_list),
     url(r'^compressor/$', compressor, name='tinymce-compressor'),
     url(r'^filebrowser/$', filebrowser, name='tinymce-filebrowser'),
-    url(r'^embeddedimagetagger/$', embeddedimagetagger, name='tinymce-embeddedimagetagger'),
+    # url(r'^embeddedimagetagger/$', embeddedimagetagger, name='tinymce-embeddedimagetagger'),
     url(r'^preview/(?P<name>.+)/$', preview, name='tinymce-preview'),
 ]
