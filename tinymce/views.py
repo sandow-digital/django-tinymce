@@ -2,14 +2,17 @@
 # Licensed under the terms of the MIT License (see LICENSE.txt)
 
 import logging
-from django.core import urlresolvers
+try:
+    from django.urls import reverse
+except ImportError:
+    # < Django 1.10
+    from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext, loader
 from django.utils.translation import ugettext as _
 from tinymce.compressor import gzip_compressor
 from tinymce.widgets import get_language_config
-from django.urls import reverse
 import json
 try:
     from django.views.decorators.csrf import csrf_exempt
