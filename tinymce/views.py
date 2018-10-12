@@ -2,7 +2,11 @@
 # Licensed under the terms of the MIT License (see LICENSE.txt)
 
 import logging
-from django.core import urlresolvers
+try:
+    from django.urls import reverse
+except ImportError:
+    # < Django 1.10
+    from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext, loader
@@ -131,9 +135,9 @@ def render_to_js_vardef(var_name, var_value):
 
 def filebrowser(request):
     try:
-        fb_url = request.build_absolute_uri(urlresolvers.reverse('fb_browse'))
+        fb_url = request.build_absolute_uri(reverse('fb_browse'))
     except:
-        fb_url = request.build_absolute_uri(urlresolvers.reverse('filebrowser:fb_browse'))
+        fb_url = request.build_absolute_uri(reverse('filebrowser:fb_browse'))
 
     return render_to_response('tinymce/filebrowser.js', {'fb_url': fb_url},
             context_instance=RequestContext(request))
