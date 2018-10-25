@@ -8,7 +8,7 @@ except ImportError:
     # < Django 1.10
     from django.core.urlresolvers import reverse
 from django.http import HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.template import RequestContext, loader
 from django.utils.translation import ugettext as _
 from tinymce.compressor import gzip_compressor
@@ -139,5 +139,4 @@ def filebrowser(request):
     except:
         fb_url = request.build_absolute_uri(reverse('filebrowser:fb_browse'))
 
-    return render_to_response('tinymce/filebrowser.js', {'fb_url': fb_url},
-            context_instance=RequestContext(request))
+    return render(request, 'tinymce/filebrowser.js', {'fb_url': fb_url})
