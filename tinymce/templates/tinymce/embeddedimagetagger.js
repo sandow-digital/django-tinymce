@@ -1,4 +1,4 @@
-function djangoEmbeddedImageTagger(field_name, url, type, win) {
+// function djangoEmbeddedImageTagger(field_name, url, type, win) {
   // var url = "{{ embeddedimagetagger_url }}?pop=2&type=" + type;
 
   // tinyMCE.activeEditor.windowManager.open(
@@ -17,6 +17,6 @@ function djangoEmbeddedImageTagger(field_name, url, type, win) {
   //         'editor_id': tinyMCE.selectedInstance.editorId
   //     }
   // );
-  console.log('\n\nIn djangoEmbeddedImageTagger...');
-  return false;
-}
+//   console.log('\n\nIn djangoEmbeddedImageTagger...');
+//   return false;
+// }
