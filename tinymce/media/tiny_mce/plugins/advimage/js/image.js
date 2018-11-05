@@ -1,5 +1,7 @@
 var ImageDialog = {
 	preInit : function() {
+		console.log('inside image.js in preInit()');
+
 		var url;
 
 		tinyMCEPopup.requireLangPack();
@@ -19,10 +21,12 @@ var ImageDialog = {
 		TinyMCE_EditableSelects.init();
 
 		if (n.nodeName == 'IMG') {
+			console.log('inside image.js in init()');
 			nl.src.value = dom.getAttrib(n, 'src');
 			nl.width.value = dom.getAttrib(n, 'width');
 			nl.height.value = dom.getAttrib(n, 'height');
 			nl.alt.value = dom.getAttrib(n, 'alt');
+			nl.tags.value = dom.getAttrib(n, 'tags');
 			nl.title.value = dom.getAttrib(n, 'title');
 			nl.vspace.value = this.getAttrib(n, 'vspace');
 			nl.hspace.value = this.getAttrib(n, 'hspace');
@@ -119,6 +123,8 @@ var ImageDialog = {
 	},
 
 	insertAndClose : function() {
+		console.log('inside image.js in insertAndClose()');
+
 		var ed = tinyMCEPopup.editor, f = document.forms[0], nl = f.elements, v, args = {}, el;
 
 		tinyMCEPopup.restoreSelection();
@@ -149,6 +155,7 @@ var ImageDialog = {
 			width : nl.width.value,
 			height : nl.height.value,
 			alt : nl.alt.value,
+			tags : nl.tags.value,
 			title : nl.title.value,
 			'class' : getSelectValue(f, 'class_list'),
 			style : nl.style.value,
