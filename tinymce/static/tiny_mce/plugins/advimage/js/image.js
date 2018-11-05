@@ -23,6 +23,7 @@ var ImageDialog = {
 			nl.width.value = dom.getAttrib(n, 'width');
 			nl.height.value = dom.getAttrib(n, 'height');
 			nl.alt.value = dom.getAttrib(n, 'alt');
+			nl.tags.value = dom.getAttrib(n, 'tags');
 			nl.title.value = dom.getAttrib(n, 'title');
 			nl.vspace.value = this.getAttrib(n, 'vspace');
 			nl.hspace.value = this.getAttrib(n, 'hspace');
@@ -146,6 +147,7 @@ var ImageDialog = {
 			width : nl.width.value,
 			height : nl.height.value,
 			alt : nl.alt.value,
+			tags : nl.tags.value,
 			title : nl.title.value,
 			'class' : getSelectValue(f, 'class_list'),
 			style : nl.style.value,
