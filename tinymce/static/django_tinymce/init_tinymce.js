@@ -18,7 +18,6 @@
   }
 
   $(function () {
-    console.log('inside init_tinymce.js');
     // initialize the TinyMCE editors on load
     $('.tinymce').each(function () {
       initTinyMCE($(this));

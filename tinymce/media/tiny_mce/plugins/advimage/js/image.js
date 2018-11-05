@@ -1,7 +1,5 @@
 var ImageDialog = {
 	preInit : function() {
-		console.log('inside image.js in preInit()');
-
 		var url;
 
 		tinyMCEPopup.requireLangPack();
@@ -21,7 +19,6 @@ var ImageDialog = {
 		TinyMCE_EditableSelects.init();
 
 		if (n.nodeName == 'IMG') {
-			console.log('inside image.js in init()');
 			nl.src.value = dom.getAttrib(n, 'src');
 			nl.width.value = dom.getAttrib(n, 'width');
 			nl.height.value = dom.getAttrib(n, 'height');
@@ -123,9 +120,7 @@ var ImageDialog = {
 	},
 
 	insertAndClose : function() {
-		console.log('inside image.js in insertAndClose()');
-
-		var ed = tinyMCEPopup.editor, f = document.forms[0], nl = f.elements, v, args = {}, el;
+    var ed = tinyMCEPopup.editor, f = document.forms[0], nl = f.elements, v, args = {}, el;
 
 		tinyMCEPopup.restoreSelection();
 
