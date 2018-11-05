@@ -78,6 +78,9 @@ var ImageDialog = {
 		if (ed.getParam("advimage_constrain_proportions", true))
 			f.constrain.checked = true;
 
+		// TODO
+		// if (ed.getParam("tags"))
+
 		// Check swap image if valid data
 		if (nl.onmouseoversrc.value || nl.onmouseoutsrc.value)
 			this.setSwapImage(true);

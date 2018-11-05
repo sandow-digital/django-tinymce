@@ -64,6 +64,7 @@ class TinyMCE(forms.Textarea):
         if tinymce.settings.USE_FILEBROWSER:
             mce_config['file_browser_callback'] = "djangoFileBrowser"
         # if tinymce.settings.USE_EMBEDDEDIMAGETAGGER:
+        #     print 'inside USE_EMBEDDEDIMAGETAGGER in get_mce_config() in widgets.py'
         #     mce_config['embedded_image_tagger_callback'] = "djangoEmbeddedImageTagger"
         mce_config.update(self.mce_attrs)
         if mce_config['mode'] == 'exact':
@@ -114,6 +115,7 @@ class TinyMCE(forms.Textarea):
         if tinymce.settings.USE_FILEBROWSER:
             js.append(reverse('tinymce-filebrowser'))
         # if tinymce.settings.USE_EMBEDDEDIMAGETAGGER:
+        #     print 'inside USE_EMBEDDEDIMAGETAGGER in _media() in widgets.py'
         #     js.append(reverse('tinymce-embeddedimagetagger'))
         js.append('django_tinymce/init_tinymce.js')
         return forms.Media(js=js)
